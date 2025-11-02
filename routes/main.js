@@ -69,7 +69,7 @@ router.get('/survey', function (req, res) {
 
 // Handle survey form submission and show results
 router.post('/survey-submitted', function (req, res) {
-  res.render('survey-submitted.ejs', {
+  res.render('survey_submitted.ejs', {
     shopName: shopData.shopName,
     responses: req.body
   });
