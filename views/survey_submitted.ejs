@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Survey Results - <%= shopName %></title>
+    <!-- External stylesheet for consistent styling across pages -->
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+
+  <body>
+    <!-- Thank-you message shown after form submission -->
+    <h1>Thank you for completing the survey!</h1>
+
+    <!-- Section showing the user's submitted responses -->
+    <h2>Your Responses:</h2>
+    <ul>
+      <li><strong>First Name:</strong> <%= responses.firstName %></li>
+      <li><strong>Surname:</strong> <%= responses.surname %></li>
+      <li><strong>Email:</strong> <%= responses.email %></li>
+      <li><strong>Age:</strong> <%= responses.age %></li>
+      <li><strong>Drink Category:</strong> <%= responses.drinkCategory %></li>
+      <li><strong>Are you a student?:</strong> <%= responses.isStudent ? 'Yes' : 'No' %></li>
+    </ul>
+
+    <!-- Link back to the survey form -->
+    <a href="/survey">Back to Survey</a>
+  </body>
+</html>

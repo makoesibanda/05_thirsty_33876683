@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= shopName %></title>
+    <!-- External stylesheet for consistent site styling -->
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+
+  <body>
+    <!-- Page heading -->
+    <h1>This is the register page</h1>
+
+    <!-- Registration form: sends user details using POST to /registered -->
+    <form method="POST" action="/registered">
+
+      <!-- First name input -->
+      <div>
+        First Name:<br>
+        <input type="text" name="first" required />
+      </div>
+
+      <!-- Last name input -->
+      <div>
+        Last Name:<br>
+        <input type="text" name="last" required />
+      </div>
+
+      <!-- Email input -->
+      <div>
+        Email:<br>
+        <input type="email" name="email" required />
+      </div>
+
+      <!-- Submit button -->
+      <div>
+        <input type="submit" value="OK" />
+      </div>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= shopName %></title>
+    <!-- External stylesheet for consistent site styling -->
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+
+  <body>
+    <!-- Main heading showing the shop name dynamically -->
+    <h1>Search Me - <%= shopName %></h1>
+
+    <!-- Short intro message below the title -->
+    <h2>Take time to find what you're looking for...</h2>
+
+    <!-- Search form: sends user input using GET method to /search_result -->
+    <form action="/search_result" method="GET">
+      <!-- Keyword input -->
+      <label>Search:</label><br>
+      <input id="search_box" type="text" name="search_text" placeholder="Enter item name" /><br><br>
+
+      <!-- Category input -->
+      <label>Category:</label><br>
+      <input id="category" type="text" name="category" placeholder="Enter category" /><br><br>
+
+      <!-- Submit button -->
+      <input type="submit" value="OK" />
+    </form>
+  </body>
+</html>

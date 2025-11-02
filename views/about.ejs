@@ -1,0 +1,30 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= shopName %></title>
+    <!-- External stylesheet for consistent styling across pages -->
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+
+  <body>
+    <!-- Main heading showing the dynamic shop name -->
+    <h1>About <%= shopName %></h1>
+
+    <!-- Short description about the business -->
+    <p>We sell all sorts of drinks</p>
+
+    <!-- Section heading for the list of shop branches -->
+    <h2>Below is the list of our shops in different locations</h2>
+
+    <!-- Dynamically list all shop locations, including manager and address -->
+    <ul>
+      <% for (let i = 0; i < shopLocations.length; i++) { %>
+        <li>
+          <strong><%= shopLocations[i].city %></strong><br>
+          Manager: <%= shopLocations[i].manager %><br>
+          Address: <%= shopLocations[i].address %>
+        </li>
+      <% } %>
+    </ul>
+  </body>
+</html>

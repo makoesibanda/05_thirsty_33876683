@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Customer Survey - <%= shopName %></title>
+    <!-- External stylesheet for consistent site styling -->
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+
+  <body>
+    <!-- Main heading with dynamic shop name -->
+    <h1>Customer Survey - <%= shopName %></h1>
+
+    <!-- Introductory text for users -->
+    <p>Please fill in the details below:</p>
+
+    <!-- Survey form: sends data to /survey-submitted using POST -->
+    <form method="POST" action="/survey-submitted">
+
+      <!-- Section 1: Customer Details -->
+      <label>First Name:</label><br>
+      <input type="text" name="firstName" required><br><br>
+
+      <label>Surname:</label><br>
+      <input type="text" name="surname" required><br><br>
+
+      <label>Email Address:</label><br>
+      <input type="email" name="email" required><br><br>
+
+      <!-- Section 2: Survey Questions -->
+      <h3>Survey Questions</h3>
+
+      <!-- Age input -->
+      <label>How old are you?</label><br>
+      <input type="text" name="age" placeholder="Enter your age"><br><br>
+
+      <!-- Drinks category selection (single choice) -->
+      <label>Which of the following drinks categories do you consume?</label><br>
+      <% for (let i = 0; i < productCategories.length; i++) { %>
+        <input type="radio" name="drinkCategory" value="<%= productCategories[i] %>">
+        <%= productCategories[i] %><br>
+      <% } %>
+      <br>
+
+      <!-- Checkbox for student status -->
+      <label>Are you a student?</label>
+      <input type="checkbox" name="isStudent" value="yes"> Yes<br><br>
+
+      <!-- Submit button -->
+      <input type="submit" value="Submit Survey">
+    </form>
+  </body>
+</html>
